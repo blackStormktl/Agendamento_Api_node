@@ -51,7 +51,9 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  User: 'User'
+  User: 'User',
+  Service: 'Service',
+  Scheduling: 'Scheduling'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -80,6 +82,29 @@ export const UserScalarFieldEnum = {
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const ServiceScalarFieldEnum = {
+  id: 'id',
+  duration: 'duration',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
+} as const
+
+export type ServiceScalarFieldEnum = (typeof ServiceScalarFieldEnum)[keyof typeof ServiceScalarFieldEnum]
+
+
+export const SchedulingScalarFieldEnum = {
+  id: 'id',
+  Hour: 'Hour',
+  date: 'date',
+  status: 'status',
+  service_id: 'service_id',
+  createAt: 'createAt',
+  updateAt: 'updateAt'
+} as const
+
+export type SchedulingScalarFieldEnum = (typeof SchedulingScalarFieldEnum)[keyof typeof SchedulingScalarFieldEnum]
 
 
 export const SortOrder = {

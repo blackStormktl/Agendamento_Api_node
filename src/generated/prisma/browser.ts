@@ -22,3 +22,13 @@ export * from './enums.js';
  * 
  */
 export type User = Prisma.UserModel
+/**
+ * Model Service
+ * 
+ */
+export type Service = Prisma.ServiceModel
+/**
+ * Model Scheduling
+ * 
+ */
+export type Scheduling = Prisma.SchedulingModel

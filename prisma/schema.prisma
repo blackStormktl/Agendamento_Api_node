@@ -22,3 +22,29 @@ model User{
   updateAt DateTime @updatedAt
 
 }
+
+model Service{
+  id String @id @default(uuid())
+  duration Int
+  scheduling Scheduling[]
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
+
+enum status{
+  PENDENTE
+  CONCLUIDO
+  ATRASADO
+  REMARCADO
+}
+
+model Scheduling{
+  id String @id @default(uuid())
+  Hour String
+  date DateTime
+  status status @default(PENDENTE)
+  service_id String
+  service Service @relation(fields: [service_id],references: [id])
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
