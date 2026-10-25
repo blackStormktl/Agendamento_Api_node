@@ -5,4 +5,4 @@ import { userSchemas } from "./schemas/userSchemas";
 
 export const route =  Router()
 
-route.post("/",userValidate(userSchemas),new userController().handdle)
+route.post("/user",userValidate(userSchemas),new userController().handdle)
